@@ -1,0 +1,45 @@
+// ----------------------------
+// --- MIXINS AND VARIABLES ---
+// ----------------------------
+
+// -----------
+// COLORS
+
+:root {
+    // Main (Blue)
+    --blue-primary: #536dfe;
+    --blue-secondary: #f1f3ff;
+    --dark-blue: #364fc7;
+
+    // Dark (Text)
+    --dark-grey: #212529;
+    --grey: #343a40;
+    --white: #fff;
+}
+
+.theme-dark {
+    // Main (Blue)
+    --blue-primary: #536dfe;
+    --blue-secondary: #1e2c70;
+    --dark-blue: #1e2c70;
+
+    // Dark (Text)
+    --dark-grey: #fff;
+    --grey: #f1f3f5;
+    --white: #fff;
+}
+
+// Main (Blue)
+
+$blue-primary: var(--blue-primary);
+$blue-secondary: var(--blue-secondary);
+$blue-tertiary: #bac5ff;
+$dark-blue: var(--dark-blue);
+
+// Dark (Text)
+
+$dark-grey: var(--dark-grey);
+$grey: var(--grey);
+$white: var(--white);
+
+// -----------

@@ -1,0 +1,204 @@
+@import "_variables.scss";
+
+// ----------------------
+// --- GENERAL STYLES ---
+// ----------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-grey;
+}
+button {
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    @media (max-width: 77em) {
+        font-size: 56.25%;
+    }
+    // 1008px
+    @media (max-width: 63em) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: $grey;
+}
+
+body.theme-dark {
+    background-color: #172255;
+}
+
+.container {
+    max-width: 123rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+.section {
+    margin-top: 12.8rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    font-weight: 700;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn--primary {
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        background-color: $blue-primary;
+        color: $white;
+        padding: 2rem 4.8rem;
+        border-radius: 8px;
+        box-shadow: 0 0 1.2rem $blue-primary;
+    }
+    font-size: 1.6rem;
+    background-color: $blue-primary;
+    color: $white;
+    padding: 2rem 4.8rem;
+    border-radius: 8px;
+    box-shadow: 0 0 1.2rem $blue-primary;
+    &:hover,
+    &:active {
+        transform: translateY(-0.6rem) scale(1.05);
+    }
+}
+
+.btn--secondary {
+    &:link,
+    &:visited {
+        background-color: $blue-primary;
+        color: $white;
+        border-radius: 6px;
+    }
+
+    &:hover,
+    &:active {
+        background-color: $white;
+        color: $blue-primary;
+        box-shadow: inset 0 0 0 2px $blue-primary;
+        path {
+            stroke: $blue-primary;
+        }
+    }
+}
+
+.btn--outline {
+    color: $blue-primary;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 2px $blue-primary;
+    
+    &:hover {
+        background-color: $blue-primary;
+        color: $white;
+    }
+}
+
+.btn--lg {
+    font-size: 1.2rem;
+    padding: 1.2rem 3.2rem;
+    text-transform: uppercase;
+}
+
+.btn--lower {
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+    border-radius: 4px !important;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-grey;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: $grey;
+    text-align: center;
+    font-weight: 400;
+}
+
+.grid {
+    display: grid;
+    column-gap: 8rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--2-1 {
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid--3-2 {
+    grid-template-columns: 3fr 2fr;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 2.4rem;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 6.4rem;
+}
+
+@media (max-width: 77em) {
+    .grid {
+        column-gap: 6.4rem;
+    }
+}
+
+// 1008px
+@media (max-width: 63em) {
+    .grid--2-1 {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+// 768px
+@media (max-width: 48em) {
+    .grid {
+        column-gap: 4.8rem;
+    }
+    .grid--2-1 {
+        grid-template-columns: 1fr;
+    }
+    .section {
+        margin-top: 9.6rem;
+    }
+}
